@@ -1,4 +1,4 @@
-const CACHE = "forum-v10-20260909";
+const CACHE = "forum-v11-20260909";
 const ASSETS = [
   "./",
   "./index.html",
