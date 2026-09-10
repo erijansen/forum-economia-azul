@@ -1,27 +1,43 @@
-FÓRUM ECONOMIA AZUL — ATUALIZAÇÃO v11 — 09SET2026
+FÓRUM ECONOMIA AZUL — v12 RESPONSIVA
 
-ALTERAÇÕES DA v11
-- Layout inicial simplificado: somente quatro acessos principais.
-- Aba “Equipe” renomeada visualmente para “Oficiais”.
-- Hospedagem agora mostra SOMENTE os oficiais constantes da planilha.
-- Resumo: 14 oficiais — 6 EAMPE, 2 CPPE e 6 HOTEL.
-- Destaque específico para os oficiais com check-in em 10SET.
-- Atualizadas as fotos de:
-  * Alte Esq André
-  * CMG (IM) Marcelo Bezerra
-- Cache do PWA alterado para forum-v11-20260909 para evitar fotos/layout antigos.
+OBJETIVO
+Versão otimizada simultaneamente para iPhone e iPad, mantendo prioridade
+de projeto para iPhone quando houver conflito de layout.
 
-COMO ATUALIZAR NO GITHUB
-1. Descompacte este ZIP.
-2. Entre no repositório forum-economia-azul.
+ALTERAÇÕES DA v12
+- Mobile-first preservado.
+- iPhone: largura integral, cabeçalho otimizado, áreas de toque maiores,
+  navegação inferior em toda a largura e suporte às safe areas.
+- iPad em modo retrato: conteúdo mais largo, cards maiores, agenda em
+  duas colunas, Grupos-Tarefa em duas colunas e navegação inferior flutuante.
+- iPad em modo paisagem: largura máxima de 1120 px, Acesso Rápido em quatro
+  colunas, agenda em duas ou três colunas conforme a largura, hospedagem dos
+  oficiais em três colunas e melhor aproveitamento horizontal.
+- Cronograma: horários, textos e fotos dos palestrantes ampliados em tablet.
+- Painéis AGORA / PRÓXIMO permanecem em uma coluna no iPhone e duas no iPad.
+- Melhor adaptação a iPhones estreitos.
+- Compatibilidade com safe-area do iPhone/iPad.
+- Suporte a prefers-reduced-motion.
+- Cache atualizado para forum-v12-responsive-20260909.
+
+PUBLICAÇÃO NO GITHUB
+1. Descompacte o ZIP.
+2. Abra o repositório forum-economia-azul.
 3. Add file > Upload files.
-4. Arraste todo o conteúdo descompactado, inclusive a pasta assets.
-5. Confirme a substituição dos arquivos existentes.
-6. Commit sugerido:
-   Atualização v11 - layout, oficiais e fotos
-7. Aguarde o GitHub Pages concluir o novo deploy.
+4. Envie todo o conteúdo descompactado, inclusive assets/.
+5. Commit sugerido:
+   Atualização v12 - responsividade iPhone e iPad
+6. Aguarde o GitHub Pages publicar a nova versão.
 
-SE O IPHONE MOSTRAR A VERSÃO ANTIGA
-- Abra o endereço primeiro no Safari conectado à internet.
-- Atualize a página.
-- Feche e reabra o atalho/PWA da Tela de Início.
+VALIDAÇÃO
+Na tela inicial deve aparecer:
+ATUALIZAÇÃO · 09SET2026 · v12
+
+SE O IPHONE/IPAD MOSTRAR A VERSÃO ANTIGA
+1. Abra o endereço no Safari conectado à internet.
+2. Atualize a página.
+3. Feche completamente o PWA/atalho da Tela de Início.
+4. Abra novamente.
+
+PRIORIDADE DE LAYOUT
+Em caso de conflito, a experiência do iPhone prevalece sobre a do iPad.
