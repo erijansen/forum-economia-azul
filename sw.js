@@ -1,4 +1,4 @@
-const CACHE = "forum-v12-responsive-20260909";
+const CACHE = "forum-v14-mobile-20260911";
 const ASSETS = [
   "./",
   "./index.html",
@@ -14,13 +14,13 @@ const ASSETS = [
   "./assets/palestrantes/rhaldney.webp",
   "./assets/palestrantes/silva_gomes.webp",
   "./assets/autoridades/Alte_Esq_Andre.png",
-  "./assets/autoridades/Alte_Esq_RM1_Borges.png",
   "./assets/autoridades/Alte_Esq_RM1_Oberg.png",
   "./assets/autoridades/CAlte_Bessa.png",
   "./assets/autoridades/CAlte_Renato_Melo.png",
   "./assets/autoridades/CAlte_Robledo.png",
   "./assets/autoridades/CMG_IM_Marcelo_Bezerra.png",
-  "./assets/autoridades/VAlte_Silva_Gomes.png"
+  "./assets/autoridades/VAlte_Silva_Gomes.png",
+  "./assets/autoridades/CAlte_Calixto.png"
 ];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));

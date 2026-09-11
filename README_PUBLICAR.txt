@@ -1,43 +1,27 @@
-FÓRUM ECONOMIA AZUL — v12 RESPONSIVA
+ATUALIZAÇÃO v14 — 11SET2026
+- Inserida a foto do CAlte CALIXTO na Agenda DN-01 (chegada em 14SET e partida em 16SET).
+- Mantidos os voos do CAlte CALIXTO: GOL 1880 (14SET, GIG 15h00 → REC 17h50) e Azul 5024 (16SET, REC 08h15 → GIG 11h15).
+- Hospedagem de Oficiais refeita a partir do arquivo FORUM RECIFE ATU_10SET: somente oficiais.
+- Registros EAMPE padronizados como HT EAMPE.
+- A fonte não contém números de suíte; os 6 oficiais do HT EAMPE estão marcados como “Suíte: a confirmar”, sem inferência.
+- Acesso Rápido ampliado com:
+  • Apoio às Autoridades → planilha on-line CONTROLE PRESENÇA E HOSPEDAGEM DOS ALMIRANTES.
+  • Lista de Presença → planilha on-line MOD 1 CEM - LISTAGEM FORUM ECONOMIA DO MAR - Com3DN.
+- Layout do Acesso Rápido otimizado: 2 colunas no iPhone, 3 no iPad retrato e 4 no iPad paisagem/desktop.
+- Cache offline atualizado para v14 e incluída a imagem do CAlte CALIXTO.
 
-OBJETIVO
-Versão otimizada simultaneamente para iPhone e iPad, mantendo prioridade
-de projeto para iPhone quando houver conflito de layout.
+LINKS ONLINE UTILIZADOS
+Apoio às Autoridades:
+https://docs.google.com/spreadsheets/d/1B8XAuperCzHCNw9ucr5SC5YKCy6bMiusNIMGDobCX8c/edit
 
-ALTERAÇÕES DA v12
-- Mobile-first preservado.
-- iPhone: largura integral, cabeçalho otimizado, áreas de toque maiores,
-  navegação inferior em toda a largura e suporte às safe areas.
-- iPad em modo retrato: conteúdo mais largo, cards maiores, agenda em
-  duas colunas, Grupos-Tarefa em duas colunas e navegação inferior flutuante.
-- iPad em modo paisagem: largura máxima de 1120 px, Acesso Rápido em quatro
-  colunas, agenda em duas ou três colunas conforme a largura, hospedagem dos
-  oficiais em três colunas e melhor aproveitamento horizontal.
-- Cronograma: horários, textos e fotos dos palestrantes ampliados em tablet.
-- Painéis AGORA / PRÓXIMO permanecem em uma coluna no iPhone e duas no iPad.
-- Melhor adaptação a iPhones estreitos.
-- Compatibilidade com safe-area do iPhone/iPad.
-- Suporte a prefers-reduced-motion.
-- Cache atualizado para forum-v12-responsive-20260909.
+Lista de Presença:
+https://docs.google.com/spreadsheets/d/18Wv1NVV0LDQOWmfja4woByfw4O74J9BLXryZiaLlitU/edit
 
 PUBLICAÇÃO NO GITHUB
 1. Descompacte o ZIP.
-2. Abra o repositório forum-economia-azul.
-3. Add file > Upload files.
-4. Envie todo o conteúdo descompactado, inclusive assets/.
-5. Commit sugerido:
-   Atualização v12 - responsividade iPhone e iPad
-6. Aguarde o GitHub Pages publicar a nova versão.
+2. Substitua o conteúdo do repositório pelo conteúdo da pasta Forum_Economia_Azul_v14_GitHub.
+3. Faça o commit e aguarde o GitHub Pages atualizar.
+4. Se o iPhone/iPad mostrar versão antiga, feche o PWA/atalho e reabra conectado à internet.
 
 VALIDAÇÃO
-Na tela inicial deve aparecer:
-ATUALIZAÇÃO · 09SET2026 · v12
-
-SE O IPHONE/IPAD MOSTRAR A VERSÃO ANTIGA
-1. Abra o endereço no Safari conectado à internet.
-2. Atualize a página.
-3. Feche completamente o PWA/atalho da Tela de Início.
-4. Abra novamente.
-
-PRIORIDADE DE LAYOUT
-Em caso de conflito, a experiência do iPhone prevalece sobre a do iPad.
+Na tela inicial deve aparecer: ATUALIZAÇÃO · 11SET2026 · v14
