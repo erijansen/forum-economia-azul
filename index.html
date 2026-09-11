@@ -934,7 +934,7 @@ details.card>summary{
 
 
 /* ================================================================
-   v16 — AGENDA DN-01 ATUALIZADA PELO PROGRAMA DO ASSISTENTE
+   v17 — AGENDA DN-01 ATUALIZADA PELO PROGRAMA DO ASSISTENTE
    ================================================================ */
 .quick.external{
   position:relative;
@@ -972,7 +972,7 @@ details.card>summary{
 }
 
 
-/* v16 — agenda DN-01 atualizada conforme Programa de Eventos do Assistente */
+/* v17 — agenda DN-01 atualizada conforme Programa de Eventos do Assistente */
 .home-compact{max-width:720px;margin:2px auto 14px;text-align:center;padding:8px 8px 2px}
 .home-kicker{font-size:10px;font-weight:950;letter-spacing:.13em;color:#0b88ba}
 .home-title{font-size:25px;font-weight:950;color:#17365f;margin-top:3px}
@@ -1004,6 +1004,74 @@ details.card>summary{
 }
 @media(min-width:1025px){
   .main-quick-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+
+
+/* === v17: menu visual + agenda do Fórum com retratos === */
+.main-quick-grid .quick{
+  position:relative;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:12px!important;
+  min-height:94px!important;
+  overflow:hidden;
+}
+.quick-icon{
+  width:46px;height:46px;flex:0 0 46px;border-radius:15px;
+  display:grid;place-items:center;
+  color:#0a4f83;background:linear-gradient(145deg,#edf6ff,#dcecf9);
+  border:1px solid #c9ddeb;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+}
+.quick-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.quick-copy{min-width:0;display:block}
+.main-quick-grid .quick.external .quick-icon{color:#146c4d;background:linear-gradient(145deg,#edfbf5,#d9f2e8);border-color:#bfe2d2}
+.main-quick-grid .quick.external::after{top:9px;right:10px}
+
+.forum-people-card{
+  margin:0 0 12px;padding:12px 12px 10px;border-radius:20px;
+  background:linear-gradient(135deg,#071b45 0%,#0b3d72 68%,#0e5889 100%);
+  box-shadow:0 12px 30px rgba(6,31,70,.16);overflow:hidden;
+}
+.forum-people-head{color:#fff;margin-bottom:10px}
+.forum-people-head span{display:block;color:#f4b522;font-size:9px;font-weight:950;letter-spacing:.13em}
+.forum-people-head strong{display:block;font-size:17px;line-height:1.16;margin-top:3px}
+.forum-people-head small{display:block;color:#c8d8ec;font-size:10px;margin-top:4px}
+.forum-people-strip{display:flex;gap:9px;overflow-x:auto;padding:1px 1px 5px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.person-chip{flex:0 0 132px;scroll-snap-align:start;background:rgba(255,255,255,.97);border-radius:15px;padding:8px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.person-chip img{width:100%;height:92px;object-fit:contain;object-position:center top;background:linear-gradient(#f7fbff,#eef4fa);border-radius:11px;display:block}
+.person-chip b{display:block;color:#17365f;font-size:11px;line-height:1.18;margin-top:7px}
+.person-chip small{display:block;color:#61738a;font-size:9px;line-height:1.2;margin-top:3px}
+
+.schedule-item.with-people{padding-top:12px;padding-bottom:12px}
+.speaker-list{gap:10px!important;margin-top:10px!important}
+.speaker{background:#f6f9fc;border:1px solid #dce6f0;border-radius:14px;padding:7px 9px 7px 7px;min-height:76px;box-shadow:0 3px 9px rgba(25,55,90,.04)}
+.speaker img{width:64px!important;height:70px!important;flex:0 0 64px!important;border-radius:11px!important;object-fit:contain!important;object-position:center top!important;background:linear-gradient(#fff,#edf3f8);border:1px solid #dae4ef}
+.speaker-copy b{font-size:13px!important}
+.speaker-copy small{font-size:10.5px!important;margin-top:3px!important}
+.schedule-item.current .speaker{background:#effaff;border-color:#a7d7ea}
+
+@media(max-width:649px){
+  .main-quick-grid .quick{min-height:86px!important;padding:10px!important;gap:8px!important;flex-direction:column!important;justify-content:center!important;text-align:center!important}
+  .quick-icon{width:38px;height:38px;flex-basis:38px;border-radius:12px}
+  .quick-icon svg{width:21px;height:21px}
+  .main-quick-grid .quick strong{font-size:11.5px!important}
+  .main-quick-grid .quick small{display:none!important}
+  .forum-people-card{margin-left:-2px;margin-right:-2px;padding:11px 9px 8px;border-radius:17px}
+  .forum-people-head strong{font-size:15px}
+  .person-chip{flex-basis:118px}
+  .person-chip img{height:84px}
+  .speaker{width:100%;padding:6px;min-height:70px}
+  .speaker img{width:58px!important;height:64px!important;flex-basis:58px!important}
+}
+@media(min-width:650px){
+  .main-quick-grid .quick{min-height:108px!important}
+  .quick-icon{width:52px;height:52px;flex-basis:52px}
+  .person-chip{flex-basis:150px}
+  .person-chip img{height:106px}
+  .speaker img{width:74px!important;height:82px!important;flex-basis:74px!important}
 }
 
 </style>
@@ -1071,18 +1139,18 @@ details.card>summary{
       </div>
 <section class="view active" data-view="" id="inicio">
 <div class="home-compact">
-<div class="home-kicker">PAINEL OPERACIONAL · v16</div>
+<div class="home-kicker">PAINEL OPERACIONAL · v17</div>
 <div class="home-title">Acesso Rápido</div>
 <p>Selecione a área desejada. As informações detalhadas ficam organizadas nas páginas do menu.</p>
 </div>
 <div class="quick-grid main-quick-grid">
-<a class="quick" href="#cronograma" onclick="return go('cronograma')"><strong>◷ FÓRUM 15SET</strong><small>Programação e palestrantes.</small></a>
-<a class="quick" href="#agenda-dn01" onclick="return go('agenda-dn01')"><strong>★ Agenda DN-01</strong><small>Compromissos e deslocamentos.</small></a>
-<a class="quick" href="#equipe" onclick="return go('equipe')"><strong>♙ Hospedagem Oficiais</strong><small>HT EAMPE, EAMPE, CPPE e hotéis.</small></a>
-<a class="quick" href="#grupos" onclick="return go('grupos')"><strong>▦ Grupos-Tarefa</strong><small>GTs, ETs e responsabilidades.</small></a>
-<a class="quick" href="#reuniao-sgm" onclick="return go('reuniao-sgm')"><strong>▤ Reunião com SGM</strong><small>Registro das decisões SGM / DN-01.</small></a>
-<a class="quick external" href="https://docs.google.com/spreadsheets/d/1B8XAuperCzHCNw9ucr5SC5YKCy6bMiusNIMGDobCX8c/edit" rel="noopener" target="_blank"><strong>🚘 Apoio às Autoridades</strong><small>Presença, hospedagem, viatura e motorista.</small></a>
-<a class="quick external" href="https://docs.google.com/spreadsheets/d/18Wv1NVV0LDQOWmfja4woByfw4O74J9BLXryZiaLlitU/edit" rel="noopener" target="_blank"><strong>📋 Lista de Presença</strong><small>Relação oficial on-line.</small></a>
+<a class="quick" href="#cronograma" onclick="return go('cronograma')"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 18v4M7 3h10v7a5 5 0 0 1-10 0V3Z"/><path d="M4 8v2a8 8 0 0 0 16 0V8"/></svg></span><span class="quick-copy"><strong>FÓRUM 15SET</strong><small>Programação, palestrantes e moderação.</small></span></a>
+<a class="quick" href="#agenda-dn01" onclick="return go('agenda-dn01')"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h3M8 17h6"/></svg></span><span class="quick-copy"><strong>Agenda DN-01</strong><small>Compromissos e deslocamentos.</small></span></a>
+<a class="quick" href="#equipe" onclick="return go('equipe')"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20v-9M21 20v-7a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v3"/><path d="M3 16h18M6 10V7h5a3 3 0 0 1 3 3"/></svg></span><span class="quick-copy"><strong>Hospedagem Oficiais</strong><small>HT EAMPE, EAMPE, CPPE e hotéis.</small></span></a>
+<a class="quick" href="#grupos" onclick="return go('grupos')"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5v4M10 12h4M10.2 13.2 6.8 16M13.8 13.2l3.4 2.8"/></svg></span><span class="quick-copy"><strong>Grupos-Tarefa</strong><small>GTs, ETs e responsabilidades.</small></span></a>
+<a class="quick" href="#reuniao-sgm" onclick="return go('reuniao-sgm')"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4V4Z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="quick-copy"><strong>Reunião com SGM</strong><small>Registro das decisões SGM / DN-01.</small></span></a>
+<a class="quick external" href="https://docs.google.com/spreadsheets/d/1B8XAuperCzHCNw9ucr5SC5YKCy6bMiusNIMGDobCX8c/edit" rel="noopener" target="_blank"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 16 1.5-6h11L19 16M3 16h18v4h-2M5 20H3v-4M7 20h10"/><circle cx="7" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg></span><span class="quick-copy"><strong>Apoio às Autoridades</strong><small>Presença, hospedagem, viatura e motorista.</small></span></a>
+<a class="quick external" href="https://docs.google.com/spreadsheets/d/18Wv1NVV0LDQOWmfja4woByfw4O74J9BLXryZiaLlitU/edit" rel="noopener" target="_blank"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/></svg></span><span class="quick-copy"><strong>Lista de Presença</strong><small>Relação oficial on-line.</small></span></a>
 </div>
 </section><section class="view" data-view="" id="reuniao-sgm">
 <div class="section-title">REGISTRO DAS DECISÕES - Reunião com SGM e DN-01</div>
@@ -1124,6 +1192,20 @@ details.card>summary{
 </section>
 <section class="view" data-view="" id="cronograma">
 <div class="section-title">Cronograma do Fórum — 15SET2026</div>
+<div class="forum-people-card">
+  <div class="forum-people-head"><span>PROGRAMAÇÃO DO FÓRUM</span><strong>Abertura, palestrantes e moderação</strong><small>Toque/role horizontalmente para consultar os participantes em destaque.</small></div>
+  <div class="forum-people-strip" aria-label="Abertura, palestrantes e moderador">
+    <div class="person-chip"><img src="assets/palestrantes/cardoso.webp" alt="VAlte Marcelo Menezes Cardoso"><b>VAlte Cardoso</b><small>Abertura · Comandante do 3º DN</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/armando.webp" alt="Armando Monteiro Bisneto"><b>Armando Monteiro Bisneto</b><small>Portos e escoamento</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/haenell.webp" alt="Haenell Farias da Costa"><b>Haenell Farias da Costa</b><small>Turismo, esporte e lazer</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/diogo.webp" alt="Prof. Dr. Diogo Nunes"><b>Prof. Dr. Diogo Nunes</b><small>Pesca</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/alfredo.webp" alt="Prof. Dr. Alfredo Oliveira Gálvez"><b>Prof. Dr. Alfredo Gálvez</b><small>Aquicultura</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/oberg.webp" alt="Alte Esq RM1 Elis Treidler Oberg"><b>Alte Esq (RM1) Oberg</b><small>Economia do Mar e Segurança Marítima</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/silva_gomes.webp" alt="VAlte Marcelo da Silva Gomes"><b>VAlte Silva Gomes</b><small>SisGAAz</small></div>
+    <div class="person-chip"><img src="assets/palestrantes/rhaldney.webp" alt="Rhaldney Santos"><b>Rhaldney Santos</b><small>Jornalista · Moderador</small></div>
+  </div>
+</div>
+
 <details class="card" style="margin-bottom:10px">
 <summary style="padding:12px 14px;font-weight:900;color:#17365f;cursor:pointer">🖼️ Ver arte atualizada da programação</summary>
 <div style="padding:0 10px 10px"><img alt="Programação atualizada do Fórum em 15SET2026" class="program-art" src="assets/programacao_forum_15SET.webp"/></div>
@@ -1152,8 +1234,6 @@ details.card>summary{
 <div class="route-row"><b>19SET · EAMPE × Marco Zero</b><small>Deslocamento: 15 a 25 min · Saída sugerida: 10h50 a 11h00</small></div>
 <div class="route-row"><b>20SET · EAMPE × Natal</b><small>Deslocamento: 4 horas</small></div></div></details></section><section class="view" data-view="" id="equipe">
 <div class="section-title">Hospedagem — Autoridades e Oficiais</div>
-<div class="priority-banner lodging-priority">
-<div class="eyebrow">CRITÉRIO DE PRIORIDADE</div>
 <strong>1º HT EAMPE · 2º relação FORUM RECIFE ATU_10SET</strong>
 <small>Em caso de conflito, prevalece a distribuição nominal do HT EAMPE informada pelo CEM. Para os demais oficiais, são utilizados os dados do arquivo de hospedagem.</small>
 </div>
@@ -1168,7 +1248,6 @@ details.card>summary{
 <details class="officer-block ht-priority" open=""><summary>HT EAMPE — 9 oficiais</summary><div class="officer-list"><div class="officer-card"><b>VAlte MARCELO MENEZES CARDOSO</b><small>DN-01</small><div class="officer-tags"><span class="room-tag">🚪 Suítes 5 e 6</span></div></div><div class="officer-card"><b>VAlte MARCELO DA SILVA GOMES</b><small>DGePM</small><div class="officer-tags"><span class="room-tag">🚪 Suíte 1</span></div></div><div class="officer-card"><b>CAlte ROBLEDO DE LEMOS COSTA E SÁ</b><small>SECIRM</small><div class="officer-tags"><span class="room-tag">🚪 Suíte 2</span></div></div><div class="officer-card"><b>CMG ERIJANSEN DE SOUZA MACIEL</b><small>DN-02</small><div class="officer-tags"><span class="room-tag">🚪 Suíte 3</span></div></div><div class="officer-card"><b>CT (T) ELISA</b><small>Staff 3ºDN</small><div class="officer-tags"><span class="room-tag">🚪 Suíte 4</span></div></div><div class="officer-card"><b>GM (T) CAROLINE SIMONETTI DE MEDEIROS RÊGO</b><small>COMSOC</small><div class="officer-tags"><span class="room-tag">🚪 Suíte 4</span></div></div><div class="officer-card"><b>CMG JULIANELLI</b><small>Staff / Autoridade</small><div class="officer-tags"><span class="room-tag">🚪 Câmara do Comandante</span></div></div><div class="officer-card"><b>CF FERNANDO LIMA SANTOS</b><small>CPRN-01</small><div class="officer-tags"><span class="room-tag">🚪 Camarote do Imediato</span></div></div><div class="officer-card"><b>CT ALEXANDRE</b><small>Assistente DN-01</small><div class="officer-tags"><span class="room-tag">🚪 Camarote do Imediato</span></div></div></div></details>
 <details class="officer-block" open=""><summary>EAMPE — 4 oficiais</summary><div class="officer-list"><div class="officer-card"><b>CF (FN) THIAGO DANTAS BARBOSA</b><small>3ºBtlOpLitFN · 3ºBtlOpLitFN – 01</small><div class="officer-tags"><span>IN 14/09/26</span><span>OUT 16/09/26</span><span>🚐 VTR FN</span></div></div><div class="officer-card"><b>CC (AFN) SOLIMAR</b><small>3ºBtlOpLitFN · SEGURANÇA</small><div class="officer-tags"><span>IN 14/09/26</span><span>OUT 16/09/26</span><span>🚐 ÔNIBUS FN</span></div></div><div class="officer-card"><b>CT (RM2-T) NATHALIA RAMADE DA SILVA</b><small>COM3DN · COMSOC</small><div class="officer-tags"><span>IN 13/09/26</span><span>OUT 16/09/26</span><span>🚐 VTR HNNa (13SET)</span></div></div><div class="officer-card"><b>2ºTen (RM2-T) LAÍS BEUTHNER BORGES</b><small>COM3DN · COMSOC</small><div class="officer-tags"><span>IN 10/09/26</span><span>OUT 16/09/26</span><span>🚐 VAN (10SET)</span></div></div></div></details><details class="officer-block" open=""><summary>CPPE — 1 oficiais</summary><div class="officer-list"><div class="officer-card"><b>CF (FN) RAFAEL TEIXEIRA  DE FREITAS E SILVA</b><small>COM3DN · DN-20</small><div class="officer-tags"><span>IN 10/09/26</span><span>OUT 16/09/26</span><span>🚐 VTR DN-20 (10 SET)</span></div></div></div></details><details class="officer-block" open=""><summary>HOTEL — 6 oficiais</summary><div class="officer-list"><div class="officer-card"><b>CMG RONALDO DE ALMEIDA MIRANDA JUNIOR</b><small>COM3DN · COORDENADOR</small><div class="officer-tags"><span>IN 10/09/26</span><span>OUT 16/09/26</span><span>🚐 VERSA 3DN (10SET)</span></div></div><div class="officer-card"><b>CF (IM) JORGE EDUARDO FRANCO</b><small>CEIMNa · CEIMNA</small><div class="officer-tags"><span>IN 14/09/26</span><span>OUT 15/09/26</span><span>🚐 VTR CEIMNa</span></div></div><div class="officer-card"><b>CC RENAN DA SILVA FARIA</b><small>COM3DN · DN-30</small><div class="officer-tags"><span>IN 10/09/26</span><span>OUT 16/09/26</span><span>🚐 VERSA 3DN (10SET)</span></div></div><div class="officer-card"><b>1ºTen GUILHERME DA SILVA AZEVEDO NETO</b><small>SSN-3 · MOSTRUÁRIO</small><div class="officer-tags"><span>IN 14/09/26</span><span>OUT 16/09/26</span><span>🚐 VTR SSN-3</span></div></div><div class="officer-card"><b>1ºTen (RM2-T) NELSON FREIRE MACHADO</b><small>COM3DN · TI</small><div class="officer-tags"><span>IN 10/09/26</span><span>OUT 16/09/26</span><span>🚐 VAN (10SET)</span></div></div><div class="officer-card"><b>2ºTen (RM2-T) JEFFERSON ROBERTO DE LIRA</b><small>COM3DN · COMSOC</small><div class="officer-tags"><span>IN 10/09/26</span><span>OUT 16/09/26</span><span>🚐 VAN (10SET)</span></div></div></div></details>
 </div>
-<div class="compact-note source-note"><strong>Fonte complementar:</strong> FORUM RECIFE ATU_10SET. A relação de HT EAMPE acima tem prioridade sobre eventuais divergências de local constantes na planilha.</div>
 </section><section class="view" data-view="" id="grupos">
 <div class="section-title">Organização por Grupos-Tarefa</div>
 <div class="card intro" style="margin-bottom:10px"><p>Coordenação geral do Fórum: <strong>CMG RONALDO DE ALMEIDA MIRANDA JUNIOR</strong>. Toque em cada Grupo-Tarefa para abrir suas Equipes de Trabalho e responsabilidades.</p></div>
