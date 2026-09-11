@@ -1,27 +1,20 @@
-ATUALIZAÇÃO v14 — 11SET2026
-- Inserida a foto do CAlte CALIXTO na Agenda DN-01 (chegada em 14SET e partida em 16SET).
-- Mantidos os voos do CAlte CALIXTO: GOL 1880 (14SET, GIG 15h00 → REC 17h50) e Azul 5024 (16SET, REC 08h15 → GIG 11h15).
-- Hospedagem de Oficiais refeita a partir do arquivo FORUM RECIFE ATU_10SET: somente oficiais.
-- Registros EAMPE padronizados como HT EAMPE.
-- A fonte não contém números de suíte; os 6 oficiais do HT EAMPE estão marcados como “Suíte: a confirmar”, sem inferência.
-- Acesso Rápido ampliado com:
-  • Apoio às Autoridades → planilha on-line CONTROLE PRESENÇA E HOSPEDAGEM DOS ALMIRANTES.
-  • Lista de Presença → planilha on-line MOD 1 CEM - LISTAGEM FORUM ECONOMIA DO MAR - Com3DN.
-- Layout do Acesso Rápido otimizado: 2 colunas no iPhone, 3 no iPad retrato e 4 no iPad paisagem/desktop.
-- Cache offline atualizado para v14 e incluída a imagem do CAlte CALIXTO.
+ATUALIZAÇÃO v15 — 11SET2026
 
-LINKS ONLINE UTILIZADOS
-Apoio às Autoridades:
-https://docs.google.com/spreadsheets/d/1B8XAuperCzHCNw9ucr5SC5YKCy6bMiusNIMGDobCX8c/edit
+PRINCIPAIS ALTERAÇÕES
+- Página principal simplificada: somente Menu Principal / Acesso Rápido.
+- “REGISTRO DAS DECISÕES - Reunião com SGM e DN-01” movido para página própria, acessível pelo menu “Reunião com SGM”.
+- Hospedagem refeita com prioridade para a distribuição nominal do HT EAMPE informada pelo CEM.
+- Quatro categorias distintas: HT EAMPE, EAMPE, CPPE e HOTEL.
+- Fotos do Alte Esq (RM1) OBERG e do CAlte (RM1) BESSA atualizadas com os arquivos fornecidos.
+- Foto do Alte OBERG atualizada também na página do Fórum/palestrantes.
+- Mantidos os links on-line para Apoio às Autoridades e Lista de Presença.
+- Layout do Menu Principal e da hospedagem otimizado para iPhone e iPad.
+- Cache offline atualizado para v15.
 
-Lista de Presença:
-https://docs.google.com/spreadsheets/d/18Wv1NVV0LDQOWmfja4woByfw4O74J9BLXryZiaLlitU/edit
-
-PUBLICAÇÃO NO GITHUB
-1. Descompacte o ZIP.
-2. Substitua o conteúdo do repositório pelo conteúdo da pasta Forum_Economia_Azul_v14_GitHub.
-3. Faça o commit e aguarde o GitHub Pages atualizar.
-4. Se o iPhone/iPad mostrar versão antiga, feche o PWA/atalho e reabra conectado à internet.
-
-VALIDAÇÃO
-Na tela inicial deve aparecer: ATUALIZAÇÃO · 11SET2026 · v14
+PUBLICAÇÃO NO GITHUB PAGES
+1. Abra o repositório que já publica o site.
+2. Substitua o conteúdo da raiz pelo conteúdo desta pasta.
+3. Não envie a pasta Forum_Economia_Azul_v15_GitHub como subpasta: envie os arquivos e a pasta assets diretamente na raiz.
+4. Faça o commit.
+5. Não é necessário alterar a configuração do GitHub Pages se o repositório anterior já estava publicado corretamente.
+6. Em iPhone/iPad, se a versão anterior persistir, feche/reabra o site ou recarregue a página; o novo service worker usa cache v15.
